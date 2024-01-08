@@ -46,8 +46,12 @@ class CorridaController extends Controller
         ]);
 
         // salva imagem
+        // $photo = $request->file('cover_image');
+        // $photoPath = $photo->store('photos', 'public');
+
         $photo = $request->file('cover_image');
-        $photoPath = $photo->store('photos', 'public');
+        $photoPath = $photo->storeAs('public/photos', $photo->hashName());
+        Storage::setVisibility($photoPath, "public");
 
         $corrida->photo = $photoPath;
         $corrida->save();

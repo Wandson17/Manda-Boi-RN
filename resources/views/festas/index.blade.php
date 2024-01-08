@@ -47,7 +47,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('corrida.show', $festa->corrida->id) }}">{{ $festa->corrida->nome }}</a>
+                                {{-- <a href="{{ route('corrida.show', $festa->corrida->id) }}">{{ $festa->corrida->nome }}</a> --}}
                             </td>
                             <td>
                                 <a href="{{ route('festa.edit', $festa->id) }}">Editar</a></td>
