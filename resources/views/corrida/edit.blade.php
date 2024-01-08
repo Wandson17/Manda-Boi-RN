@@ -53,14 +53,12 @@
                         <form action="{{ route('corrida.update', $corrida->id) }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
-                            <div class="card mb-3 bg-light navbar-light bg-opacity-75 ">
+                            <div class="card mb-3 bg-dark navbar-light text-light" style="height: 95vh;">
 
                                 <div class="card-body">
-                                    <div
-                                        class=" bg-secondary text-light mb-4 w-100  d-flex justify-content-center align-content-center">
+                                    <h3 class="d-flex justify-content-center align-content-center m-2">Cadastro de Vaquejada</h3>
+                                    <hr class="w-100" />
 
-                                        <h4 class="d-flex justify-content-center align-content-center ">Informações da Vaquejada</h4>
-                                    </div>
                                     <div class="row d-flex justify-content-center">
 
 
@@ -96,12 +94,6 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="row">
-                                                        <div class="row">
-                                                            <div class="col-12 fw-bold">
-                                                                Dados pessoais:
-                                                            </div>
-                                                        </div>
-
                                                         <div class="col-md-11">
                                                             <div class="row">
                                                                 <label for="name" class="col-12">
@@ -239,7 +231,7 @@
 
                                                 <div class="row d-flex justify-content-center align-content-center">
                                                     <div class="col-md-4">
-                                                        <button class="btn btn-secondary w-100">Prosseguir</button>
+                                                        <button class="btn w-100" style="background-color: #FFB17B;">Prosseguir</button>
                                                     </div>
                                                 </div>
                                             </div>

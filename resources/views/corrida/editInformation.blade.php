@@ -34,9 +34,7 @@
                                         </div>
     
                                         <div class="col-12 d-flex justify-content-center">
-                                            <button class="btn btn-secondary w-50 ">Cadastrar <i
-                                                    class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-                                            </button>
+                                            <button class="btn w-50 " style="background-color: #FFB17B;">Cadastrar</button>
                                         </div>
                                     </form>
                                 </div>

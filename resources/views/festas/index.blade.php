@@ -19,43 +19,35 @@
             <div class="VaqCadastradas">
                 <div class="conteudobarras">
                     <h1>FESTAS CADASTRADAS</h1>
-                <div class="barra">
-                    <div class="links">
-                        <table>
-                            @foreach ($festas as $festa)
-                                <tr>
-                                    <td>{{ $festa->nome }}</td>
-                                    <td>{{ $festa->local }}</td>
-                                    <td>{{ $festa->data_inicio }}</td>
-                                    <td>{{ $festa->time}}</td>
-                                    <td>{{ $festa->corrida_id}}</td>
-                                    <td>
-                                        @php
-                                            $ingressosExists = App\Http\Controllers\IngressoController::ingressosExists($festa->id);
-                                        @endphp
-                                        @if ($ingressosExists)
-                                            <a href="{{ route('ingresso.create', $festa->id) }}">Atualizar</a>
-                                        @else
-                                            <a href="{{ route('ingresso.create', $festa->id) }}">Criar</a>
-                                        @endif
-                                    </td>
-                                        <td>
-                                            <a href="{{ route('festa.edit', $festa->id) }}">Editar</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{ route('festa.editInformation', $festa->id) }}">Editar informações</a>
-                                        </td>
-                                        <td>
-                                            <a href="{{ route('festa.destroy', $festa->id) }}">Remover</a>
-                                        </td>
-                                    </tr>
-                            @endforeach
-                        </table>
+
+                    @foreach ($festas as $festa)
+                    <div class="barra">
+                        Nome: {{ $festa->nome }} - 
+                        Local: {{ $festa->endereco }} - 
+                        Data: {{ $festa->data_inicio }} - 
+                        Horário: {{ $festa->time}} - 
+                        Vaquejada: {{ $festa->corrida_id}}
+    
+                        <div class="links">
+                            @php
+                                $ingressosExists = App\Http\Controllers\IngressoController::ingressosExists($festa->id);
+                            @endphp
+                            @if ($ingressosExists)
+                                <a href="{{ route('ingresso.create', $festa->id) }}">Atualizar</a>
+                            @else
+                                <a href="{{ route('ingresso.create', $festa->id) }}">Criar</a>
+                            @endif
+                            <a href="{{ route('festa.edit', $festa->id) }}">Editar</a>
+                            <a href="{{ route('festa.editInformation', $festa->id) }}">Editar informações</a>
+                            <a href="{{ route('festa.destroy', $festa->id) }}">Remover</a>
+                        </div>
                     </div>
-                </div>
+                @endforeach
+    
+                        <a href="{{ route('festa.create', $festa->id) }}"><button>Adicionar</button></a>
 
+                
 
-                    <a href="{{ route('festa.create', $festa->id) }}"><button>Adicionar</button></a>
     </main>
 
 @endsection

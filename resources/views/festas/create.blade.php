@@ -56,7 +56,7 @@
                             <div class="card mb-3 bg-dark navbar-light text-light" style="height: 515px;">
 
                                 <div class="card-body">
-                                    <h3 class="d-flex justify-content-center align-content-center m-2">Cadastro de Festas</h3>
+                                    <h4 class="d-flex justify-content-center align-content-center ">Informações da Festa</h4>
                                     <hr class="w-100" />
 
                                     <div class="row d-flex justify-content-center">
@@ -210,7 +210,7 @@
                                             <div class="row d-flex justify-content-center align-content-center">
                                                 <div class="col-12 d-flex justify-content-center m-2">
                                                     <button class="btn" style="background-color: #FFB17B;">Prosseguir</button>
-                                                  </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
