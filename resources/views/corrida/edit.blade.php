@@ -33,10 +33,10 @@
     @include('layouts.navbar')
 
     @error('cover_image')
-    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{ $message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ $message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
     @enderror
 
     <main class="container">
@@ -50,7 +50,8 @@
 
                         </div>
 
-                        <form action="{{ route('corrida.update', $corrida->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('corrida.update', $corrida->id) }}" method="post"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="card mb-3 bg-light navbar-light bg-opacity-75 ">
 
@@ -72,7 +73,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 ">
-                                                    <img src="{{ asset('storage/' . $corrida->photo) }}" id="folder_image"
+                                                    <img src="{{ Storage::url($corrida->photo) }}" id="folder_image"
                                                         class="w-100">
                                                 </div>
                                             </div>
@@ -83,8 +84,8 @@
                                                         <button class="btn btn-secondary custom-file-btn"
                                                             onclick="">Upload
                                                             <i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                                                        <input type="file" id="cover_image" name="cover_image" value="{{ $corrida->photo }}"
-                                                            class="custom-file-input" />
+                                                        <input type="file" id="cover_image" name="cover_image"
+                                                            value="{{ $corrida->photo }}" class="custom-file-input" />
                                                     </div>
                                                 </div>
 
@@ -173,8 +174,7 @@
                                                                     @endphp
                                                                     <select name="city" id="city" id="city"
                                                                         class="form-select @error('city') is-invalid @enderror"
-                                                                        selected="{{ old('city') }}"
-                                                                        required>
+                                                                        selected="{{ old('city') }}" required>
                                                                         @foreach ($cities as $city)
                                                                             <option value="{{ $city->id }}">
                                                                                 {{ $city->name }}</option>
@@ -213,8 +213,7 @@
                                                                             class="form-control me-5 rounded @error('start_date') is-invalid @enderror"
                                                                             placeholder="Data de inicio" aria-label="data"
                                                                             id="start_date" name="start_date"
-                                                                            value="{{ old('start_date') }}"
-                                                                            >
+                                                                            value="{{ old('start_date') }}">
                                                                         @error('start_date')
                                                                             <div class="invalid-feedback">{{ $message }}
                                                                             </div>
@@ -223,8 +222,7 @@
                                                                             class="form-control rounded @error('end_date') is-invalid @enderror"
                                                                             placeholder="Data de final" aria-label="data"
                                                                             id="end_date" name="end_date"
-                                                                            value="{{ old('end_date') }}"
-                                                                            >
+                                                                            value="{{ old('end_date') }}">
                                                                         @error('end_date')
                                                                             <div class="invalid-feedback">{{ $message }}
                                                                             </div>
@@ -297,7 +295,6 @@
                 }
             });
         });
-
     </script>
 
 @endsection
