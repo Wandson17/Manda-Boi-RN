@@ -15,6 +15,11 @@ class ProfileController extends Controller
         return view('profile.dashboard');
     }
 
+    public function edit()
+    {
+        return view('profile.edit');
+    }
+
     public function mySenhas()
     {
         $senhas = SenhaCorrida::where('user_id', auth()->user()->id)->get();
@@ -42,5 +47,4 @@ class ProfileController extends Controller
             ->route('profile.index')
             ->with('success', 'Informações atualizadas com sucesso!');
     }
-
 }
