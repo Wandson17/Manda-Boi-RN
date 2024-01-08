@@ -14,7 +14,7 @@
 
     <div class="VaqCadastradas">
         <div class="conteudobarras">
-            <img src="{{ asset('imgs/VAQUEJADAS_CADASTRADAS.png') }}" alt="titulo" class="pb-3">
+            <h1>VAQUEJADAS CADASTRADAS</h1>
 
             @foreach ($corridas as $corrida)
                 <div class="barra">
