@@ -17,7 +17,7 @@
 
     <main>
         <div class="container">
-
+            <section class="section register mt-5 d-flex flex-column align-items-center justify-content-center py-4">
                 <div class="container ">
                     <div class="row justify-content-center ">
                         <div class="col-lg-8 col-md-8 d-flex flex-column align-items-center justify-content-center ">
