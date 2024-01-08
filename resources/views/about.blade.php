@@ -8,6 +8,8 @@
 
 @section('body-class', 'imagemsobre')
 
+<body style="background-image: url('/imgs/maovaq.jpg');">
+    
 @section('content')
 
     @include('layouts.navbar')
@@ -56,3 +58,4 @@
             </div>
     </main>
 @endSection
+</body>

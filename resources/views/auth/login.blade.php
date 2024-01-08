@@ -65,7 +65,7 @@
                                         </div>
 
                                         <div class="col-12 d-flex justify-content-center">
-                                            <button class="btn btn-secondary w-50" type="submit">Entrar</button>
+                                            <button class="btn w-50" type="submit" style="background-color: #FFB17B;">Entrar</button>
                                         </div>
                                         <div class="col-12">
                                             <p class="small p-3">Não tem uma conta? <a
