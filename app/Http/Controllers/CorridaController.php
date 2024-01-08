@@ -44,7 +44,7 @@ class CorridaController extends Controller
             'city' => $request->city,
             'qntd_senha' => $request->qntd_senha
         ]);
-        
+
         // salva imagem
         $photo = $request->file('cover_image');
         $photoPath = $photo->store('photos', 'public');
@@ -99,8 +99,8 @@ class CorridaController extends Controller
                 'cover_image.mimes' => 'Formato de imagem inválida',
                 'cover_image.image' => 'Imagem inválida',
             ]);
-            
-            if($imageValidation->fails()) {
+
+            if ($imageValidation->fails()) {
                 return redirect()->back()->withErrors($imageValidation)->withInput();
             }
 
@@ -110,7 +110,7 @@ class CorridaController extends Controller
 
             $corrida->photo = $photoPath;
             $corrida->save();
-        } 
+        }
 
         return redirect()->route('corrida.index')
             ->with('message', 'Corrida editada com sucesso!');
@@ -142,10 +142,10 @@ class CorridaController extends Controller
         $corrida = Corrida::findOrFail($id);
 
         Storage::delete($corrida->photo);
-        
+
         $corrida->delete();
 
-        return view('corrida.index')
+        return redirect('/corrida')
             ->with('message', 'Corrida removida com sucesso!');
     }
 }
