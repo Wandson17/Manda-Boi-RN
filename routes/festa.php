@@ -8,6 +8,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         ->name('festa.create'); 
     Route::get('/festa', [App\Http\Controllers\FestaController::class, 'index'])
         ->name('festa.index');
+        
     Route::post('/festa/store', [App\Http\Controllers\FestaController::class, 'store'])
         ->name('festa.store');
     Route::get('/festa/edit/{id}', [App\Http\Controllers\FestaController::class, 'edit'])
