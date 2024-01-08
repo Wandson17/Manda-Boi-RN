@@ -15,8 +15,8 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/corrida.php';
-require __DIR__ . '/admin.php';
-require __DIR__ . '/festa.php';
-require __DIR__ . '/ingresso.php';
-require __DIR__ . '/senha.php';
-require __DIR__ . '/profile.php';
+// require __DIR__ . '/admin.php';
+// require __DIR__ . '/festa.php';
+// require __DIR__ . '/ingresso.php';
+// require __DIR__ . '/senha.php';
+// require __DIR__ . '/profile.php';
