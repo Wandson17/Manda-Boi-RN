@@ -41,7 +41,6 @@ class FestaController extends Controller
             'time' => $request->time,
             'corrida_id' => $request->corrida_id,
             'photo' => $photoPath,
-            'time' => $request->time
         ]);
 
         return redirect()->route('festa.index')
