@@ -12,6 +12,8 @@
 
     @include('layouts.navbar')
 
+    @include('layouts.flashMessage')
+
     <div class="VaqCadastradas">
         <div class="conteudobarras">
             <img src="{{ asset('imgs/VAQUEJADAS_CADASTRADAS.png') }}" alt="titulo" class="pb-3">
@@ -25,6 +27,7 @@
                         @else
                             <a href="{{ route('festa.create', $corrida->id) }}">Adicionar festa</a>
                         @endif
+                        <a href="{{ route('senha.create', $corrida->id) }}">Adicionar senha</a>
                         <a href="{{ route('corrida.editInformation', $corrida->id) }}">Editar informações</a>
                         <a href="{{ route('corrida.edit', $corrida->id) }}">Editar</a>
                         <a href="{{ route('corrida.destroy', $corrida->id) }}">Remover</a>
