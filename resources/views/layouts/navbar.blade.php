@@ -2,8 +2,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="{{ asset('imgs/manda-logo.png') }}" height="80" width="80">
+            <a class="navbar-brand fs-3 font-monospace" href="/" style="color: #FFB17B">
+                <img src="{{ asset('imgs/manda-logo.png') }}" height="82" width="82">
+                    Manda Boi RN
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -20,7 +21,7 @@
                         <button type="button" class="btn ms-3" style="background-color: #FFB17B;"
                             onclick="window.location.href='{{ route('register') }}'">Cadastro</button>
                     @else
-                        <button type="button" class="btn btn-secondary ms-3"
+                        <button type="button" class="btn btn-danger ms-3"
                             onclick="window.location.href='{{ route('logout') }}'">Sair</button>
                     @endif
                 </ul>
@@ -28,7 +29,7 @@
         </div>
 
     </nav>
-    <nav class="navbar navbar-expand-lg bg-light navbar-light bg-opacity-50" style="background-color: #FFB17B;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-opacity-50" style="background-color: #FFB17B;">
         <div class="col-12 d-flex justify-content-center">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav align-items-center mx-auto">

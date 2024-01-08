@@ -25,11 +25,11 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-center m-5 title" style="font-size: 52px;">VAQUEJADAS</h2>
     </section>
 
     <section class="container-fluid pt-1 pb-1">
         <div class="container">
+            <h2 class="text-center m-5 title" style="font-size: 52px;">VAQUEJADAS</h2>
             <div class="row gy-3 my-2">
                 <div class="row m-1">
                     @php

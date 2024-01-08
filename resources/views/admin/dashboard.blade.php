@@ -2,14 +2,6 @@
 
 @section('title', 'Dashboard - Administrador')
 
-@section('head')
-    <style>
-        body {
-            background-image: url('{{ asset('imgs/vaqueiro.jpeg') }}');
-        }
-    </style>
-@endsection
-
 @section('content')
 
     @include('layouts.navbar')
@@ -35,34 +27,34 @@
                             <section class="row g-3">
 
                                 <div class="col-12 d-flex justify-content-center ">
-                                    <div class="d-grid gap-2 col-6 mx-auto">
-                                        <button
-                                            style="width: 100%; height: 15vh; border: none; background-color: rgb(184, 181, 181); font-size: larger;"
-                                            onclick="window.location.href='{{ route('corrida.create') }}'">
-                                            <b>Cadastrar Vaquejada</b></button>
+                                    <div class="col-12 d-flex justify-content-center ">
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <button class="rounded-pill shadow"  style="width: 100%; height: 15vh; border: none; background-color: #FFB17B; font-size: larger; color:black;"
+                                            onclick="window.location.href='{{ route('corrida.create') }}'"> <b>Cadastrar Vaquejada</b></button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="d-grid gap-2 col-6 mx-auto">
-                                        <button
-                                            style="width: 100%; height: 15vh; border: none; background-color: rgb(184, 181, 181); font-size: larger;" onclick="window.location.href='{{ route('corrida.index') }}'"><b>Ver vaquejadas</b></button>
+                                    <div class="d-grid gap-2 col-6 mx-auto ">
+                                        <button class="rounded-pill shadow" style="width: 100%; height: 15vh; border: 3px #FFB17B solid; background-color: white; font-size: larger; color:black"
+                                        onclick="window.location.href='{{ route('corrida.index') }}'"><b>Ver Vaquejadas</b></button>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="d-grid gap-2 col-6 mx-auto">
-                                        <button
-                                            style="width: 100%; height: 15vh; border: none; background-color: rgb(184, 181, 181); font-size: larger;" onclick="window.location.href='{{ route('festa.index') }}'"><b>Ver
-                                                Eventos</b></button>
+                                    <div class="d-grid gap-2 col-6 mx-auto ">
+                                        <button class="rounded-pill shadow" style="width: 100%; height: 15vh; border: 3px #FFB17B solid; background-color: white; font-size: larger; color:black;"
+                                        onclick="window.location.href='{{ route('festa.index') }}'"><b>Ver Eventos</b></button>
                                     </div>
                                 </div>
 
-                                <div class="col-12 mb-4">
-                                    <div class="d-grid gap-2 col-6 mx-auto">
-                                        <button
-                                            style="width: 100%; height: 15vh; border: none; background-color: rgb(184, 181, 181); font-size: larger;" onclick="window.location.href='{{ route('senha.usuario.index') }}'"><b>Ver
-                                                Situação de senhas</b></button>
+                                <div class="col-12 d-flex justify-content-center ">
+                                    <div class="col-12 d-flex justify-content-center ">
+                                        <div class="d-grid gap-2 col-6 mx-auto">
+                                            <button class="rounded-pill shadow"  class="rounded-pill shadow" style="width: 100%; height: 15vh; border: 3px #FFB17B solid; background-color: white; font-size: larger; color:black;"
+                                            onclick="window.location.href='{{ route('senha.usuario.index') }}'"> <b>Ver Situação de Senha</b></button>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
