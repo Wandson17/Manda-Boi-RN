@@ -23,11 +23,11 @@
                         @trix($corrida, 'content', [ 'hideToolbar' => true ])
 
                         <div class="botao text-center mt-2">
-                            <button type="button" class="btn btn-light">Comprar Senha</button>
+                            <button type="button" class="btn btn-light" onclick="window.location.href='{{ route('senha.usuario.create', $corrida->id) }}'">Comprar Senha</button>
                         </div>
                     </div>
-                </div>
-            </div>
+                  </div>                
+            </section>
         </div>
     </main>
 
@@ -36,4 +36,5 @@
 
         trixEditor.setAttribute('contenteditable', false);
     </script>
+
 @endsection
