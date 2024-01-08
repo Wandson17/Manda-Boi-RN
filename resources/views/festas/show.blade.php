@@ -12,25 +12,22 @@
     @include('layouts.navbar')
 
     <main>
+        <div class="infoimportantes">
+            <div class="conteudo bg-dark">
+                <img src="{{ asset('storage/' . $festa->photo) }}" alt="poster" class="poster">
+                <div class="divcont bg-dark">
+                    <div class="w-100">
 
-        <div class="container">
-            <section class="my-3 conteudo p-5 rounded-2">
-                <div class="row">
-                    <div class="col">
-                      <img src="{{ asset('storage/' . $festa->photo) }}" alt="poster" class="poster">
-                    </div>
-                    <div class="col colorgray p-5 rounded">
-
-                        <h2 class="bg-secondary mb-5 text-center">Informações Importantes</h2>
-
+                        <h2 class="fontoverlock mb-5">INFORMAÇÕES IMPORTANTES</h2>
+    
                         @trix($festa, 'content', [ 'hideToolbar' => true ])
-
-                        <div class="botao text-center mt-2">
+                        
+                        <div class="botao text-center m-2">
                             <button type="button" class="btn btn-light" onclick="window.location.href='{{ route('ingresso.usuario.create', $festa->id) }}'">Comprar Ingresso</button>
                         </div>
                     </div>
-                  </div>                
-            </section>
+                </div>
+            </div>
         </div>
     </main>
 

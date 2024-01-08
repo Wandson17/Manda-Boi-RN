@@ -230,7 +230,7 @@
 
                                                 <div class="row d-flex justify-content-center align-content-center">
                                                     <div class="col-md-4">
-                                                        <button class="btn w-100" style="background-color: #FFB17B;">Proseguir</button>
+                                                        <button class="btn w-100" style="background-color: #FFB17B;">Prosseguir</button>
                                                     </div>
                                                 </div>
                                             </div>

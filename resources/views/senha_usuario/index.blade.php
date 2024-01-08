@@ -14,7 +14,7 @@
 
     <div class="VaqCadastradas">
         <div class="conteudobarras">
-            <img src="{{ asset('imgs/VAQUEJADAS_CADASTRADAS.png') }}" alt="titulo" class="pb-3">
+            <h1>SENHAS RESERVADAS</h1>
             @foreach ($senhas as $senha)
                 
            
@@ -27,7 +27,6 @@
 
             @endforeach
 
-        <button class="h-25 w-25">Próximo</button> 
     </div>
 
 @endsection

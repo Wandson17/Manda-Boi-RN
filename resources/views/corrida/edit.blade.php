@@ -59,8 +59,7 @@
                                     <div
                                         class=" bg-secondary text-light mb-4 w-100  d-flex justify-content-center align-content-center">
 
-                                        <h4 class="d-flex justify-content-center align-content-center ">Informações
-                                            da Vaquejada</h4>
+                                        <h4 class="d-flex justify-content-center align-content-center ">Informações da Vaquejada</h4>
                                     </div>
                                     <div class="row d-flex justify-content-center">
 

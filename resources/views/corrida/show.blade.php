@@ -17,11 +17,14 @@
                 <img src="{{ asset('storage/' . $corrida->photo) }}" alt="poster" class="poster">
                 <div class="divcont bg-dark">
                     <div class="w-100">
+
                         <h2 class="fontoverlock mb-5">INFORMAÇÕES IMPORTANTES</h2>
+
                         @trix($corrida, 'content', [ 'hideToolbar' => true ])
-                    </div>
-                    <div class="botao text-center mt-2">
-                    <button type="button" class="btn btn-light">Comprar Senha</button>
+
+                        <div class="botao text-center mt-2">
+                            <button type="button" class="btn btn-light">Comprar Senha</button>
+                        </div>
                     </div>
                 </div>
             </div>
