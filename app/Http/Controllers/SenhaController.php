@@ -41,7 +41,9 @@ class SenhaController extends Controller
             'valor' => $request->valor,
         ]);
 
-        dd($request->all());
+        return redirect()
+            ->route('corrida.index')
+            ->with('success', 'Senha criada com sucesso');
     }
 
     /**

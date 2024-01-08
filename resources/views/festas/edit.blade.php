@@ -50,7 +50,8 @@
 
                         </div>
 
-                        <form action="{{ route('festa.update', $festa->id) }}" validate method="post" enctype="multipart/form-data">
+                        <form action="{{ route('festa.update', $festa->id) }}" validate method="post"
+                            enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="festa_id" value="{{ $festa->id }}">
                             <div class="card mb-3 bg-light navbar-light bg-opacity-75 ">
@@ -73,7 +74,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 ">
-                                                    <img src="{{ asset('storage/' . $festa->photo) }}" id="folder_image"
+                                                    <img src="{{ Storage::url($festa->photo) }}" id="folder_image"
                                                         class="w-100">
                                                 </div>
                                             </div>
@@ -84,8 +85,8 @@
                                                         <button class="btn btn-secondary custom-file-btn"
                                                             onclick="">Upload
                                                             <i class="fa-solid fa-arrow-up-from-bracket"></i></button>
-                                                        <input type="file" id="cover_image" name="cover_image" value="{{ $festa->photo }}"
-                                                            class="custom-file-input" />
+                                                        <input type="file" id="cover_image" name="cover_image"
+                                                            value="{{ $festa->photo }}" class="custom-file-input" />
                                                     </div>
                                                 </div>
 
@@ -156,8 +157,8 @@
 
                                                             <div class="row">
                                                                 <div class="input-group mb-2">
-                                                                    <input type="text" name="localizacao" id="localizacao"
-                                                                        value="{{ old('localizacao') }}"
+                                                                    <input type="text" name="localizacao"
+                                                                        id="localizacao" value="{{ old('localizacao') }}"
                                                                         class="form-control @error('localizacao') is-invalid @enderror"
                                                                         aria-describedby="basic-addon1"
                                                                         value="{{ old('localizacao') }}"
