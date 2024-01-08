@@ -1,0 +1,322 @@
+.showcase {
+  height: 100vh;
+  background-image: linear-gradient(transparent 70%, #fff),
+    url(/imgs/vaqueiro.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.poster {
+  width: 100%;
+}
+
+.background {
+  background-image: url(/imgs/fundo.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.tb {
+  display: table;
+  width: 100%;
+}
+
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+button {
+  color: #fff;
+  font-family: Nunito;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+}
+
+#s-cover {
+  width: 45px;
+}
+
+.button {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 39px;
+  cursor: pointer;
+  background-color: #FFB17B;
+  border-radius: 0px 10px 10px 0px;
+}
+
+#s-circle {
+  position: relative;
+  top: -3px;
+  left: 6px;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  border-width: 3px;
+  border: 3px solid #000000;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
+}
+
+.button span {
+  position: absolute;
+  top: 40px;
+  left: 11px;
+  display: block;
+  width: 33px;
+  height: -8px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
+}
+
+.button span:before,
+.button span:after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  right: 22px;
+  width: 12px;
+  height: 3px;
+  background-color: #060606;
+  border-radius: 5px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle {
+  top: -1px;
+  width: 23px;
+  height: 3px;
+  border-width: 0;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+#s-cover:hover span {
+  top: 50%;
+  left: 47px;
+  width: 15px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before {
+  bottom: -15px;
+  transform: rotateZ(-52deg);
+}
+
+#s-cover:hover button span:after {
+  bottom: -4px;
+  transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:before,
+#s-cover:hover button span:after {
+  right: 28px;
+  width: 16px;
+  background-color: #000000;
+}
+
+form {
+  height: 96px;
+}
+
+.events {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.title {
+  font-family: "Orelega One", serif;
+  text-shadow: 2px 2px 5px grey;
+}
+
+.sobre {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 33%,
+    rgba(255, 255, 255, 0.8178921226693803) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre div {
+  width: 50%;
+  height: 40%;
+  background-color: #ffffff7d;
+  font-family: koh Santepheab;
+  color: black;
+}
+
+.imagemsobre {
+  background-image: url("/imgs/maovaq.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.infoimportantes {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* .conteudo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  background-color: rgba(128, 128, 128, 0.361);
+  border-radius: 3px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  color: white;
+} */
+
+.conteudo {
+  background-color: rgba(128, 128, 128, 0.361);
+}
+
+/* .conteudo img {
+  width: 40%;
+  height: 90%;
+} */
+
+/* .conteudo div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 90%;
+  border-radius: 5px;
+  padding: 3%;
+} */
+.colorgray {
+  background-color: rgba(89, 83, 78, 0.368);
+}
+
+/* .conteudo .botao {
+  display: flex;
+  width: 100%;
+  align-items: center;
+} */
+@media only screen and (max-width: 900px) {
+  .sobre div {
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .imagemsobre,
+  .background {
+    background-size: auto;
+  }
+}
+
+/* .conteudo {
+    flex-direction: column;
+  }
+  .conteudo img {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .conteudo div {
+    width: 80%;
+    margin-bottom: 5%;
+  } */
+/*CSS DA TELA VAQUEJADAS_CADASTRADAS*/
+.VaqCadastradas {
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.VaqCadastradas .conteudobarras {
+  background-color: rgba(255, 255, 255, 0.526);
+  border-radius: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  padding: 30px;
+}
+
+.conteudobarras .barra {
+  display: flex;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.764);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 3px;
+}
+
+.VaqCadastradas .conteudobarras button {
+  border: 1px solid green;
+  border-radius: 40px;
+  background-color: rgb(138, 202, 138);
+  color: white;
+  padding: 10px;
+
+}
+
+.VaqCadastradas .conteudobarras h1 {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+
+}
+
+.VaqCadastradas .conteudobarras img {
+  width: 50%;
+  height: 50%;
+}
+
+.imagemvaqcadastradas {
+  background-image: url("/imgs/boi_vaq.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .VaqCadastradas .conteudobarras img {
+    width: 90%;
+    height: 90%;
+  }
+
+  .imagemvaqcadastradas {
+    background-size: auto;
+  }
+}
