@@ -28,11 +28,15 @@ class FestaController extends Controller
     public function store(StoreFestaRequest $request)
     {
         $request->validated();
-        
+
         // salva imagem
         $photo = $request->file('cover_image');
-        $photoPath = $photo->store('photos', 'public');
+        $photoPath = $photo->storeAs('public/photos', $photo->hashName());
+        Storage::setVisibility($photoPath, "public");
 
+        // $photoPath = $photo->store('photos', 'public');
+
+        // dd($photoPath);
         $festa = Festa::create([
             'nome' => $request->nome,
             'endereco' => $request->localizacao,
@@ -50,7 +54,7 @@ class FestaController extends Controller
     public function show(string $id)
     {
         $festa = Festa::findOrFail($id);
-        if(!$festa->active)
+        if (!$festa->active)
             abort(404);
         return view('festas.show', compact('festa'));
     }
@@ -103,8 +107,8 @@ class FestaController extends Controller
                 'cover_image.mimes' => 'Formato de imagem inválida',
                 'cover_image.image' => 'Imagem inválida',
             ]);
-            
-            if($imageValidation->fails()) {
+
+            if ($imageValidation->fails()) {
                 return redirect()->back()->withErrors($imageValidation)->withInput();
             }
 
@@ -117,7 +121,7 @@ class FestaController extends Controller
         }
 
         return redirect()->route('festa.index')
-            ->with('success', 'Festa atualizada com sucesso!');    
+            ->with('success', 'Festa atualizada com sucesso!');
     }
 
     public function destroy(string $id)
