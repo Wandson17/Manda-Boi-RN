@@ -60,8 +60,7 @@
         <div class="container ">
             <div class="row justify-content-center ">
                 <div class="col-lg-8 col-md-8 d-flex flex-column align-items-center justify-content-center ">
-
-                    <div class="card mb-3 bg-light navbar-light bg-opacity-75 ">
+                    <div class="card mb-3 bg-light navbar-light bg-opacity-75 rounded">
 
                         <div class="card-body">
                             <div class=" mb-4 w-100  d-flex justify-content-center align-content-center">
@@ -307,4 +306,6 @@
             </div>
         </div>
     </section>
+
+    
 @endsection
