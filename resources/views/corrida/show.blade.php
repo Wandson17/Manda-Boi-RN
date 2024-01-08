@@ -12,19 +12,25 @@
     @include('layouts.navbar')
 
     <main>
-        <div class="infoimportantes">
-            <div class="conteudo bg-dark">
-                <img src="{{ asset('storage/' . $corrida->photo) }}" alt="poster" class="poster">
-                <div class="divcont bg-dark">
-                    <div class="w-100">
-                        <h2 class="fontoverlock mb-5">INFORMAÇÕES IMPORTANTES</h2>
+
+        <div class="container">
+            <section class="my-3 conteudo p-5 rounded-2">
+                <div class="row">
+                    <div class="col">
+                      <img src="{{ asset('storage/' . $corrida->photo) }}" alt="poster" class="poster">
+                    </div>
+                    <div class="col colorgray p-5 rounded">
+
+                        <h2 class="bg-secondary mb-5 text-center">Informações Importantes</h2>
+
                         @trix($corrida, 'content', [ 'hideToolbar' => true ])
+
+                        <div class="botao text-center mt-2">
+                            <button type="button" class="btn btn-light" onclick="window.location.href='{{ route('senha.usuario.create', $corrida->id) }}'">Comprar Senha</button>
+                        </div>
                     </div>
-                    <div class="botao text-center mt-2">
-                    <button type="button" class="btn btn-light">Comprar Senha</button>
-                    </div>
-                </div>
-            </div>
+                  </div>                
+            </section>
         </div>
     </main>
 
@@ -33,4 +39,5 @@
 
         trixEditor.setAttribute('contenteditable', false);
     </script>
+
 @endsection
