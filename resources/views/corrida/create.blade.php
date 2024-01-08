@@ -52,17 +52,11 @@
 
                         <form action="{{ route('corrida.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="card mb-3 bg-light navbar-light bg-opacity-75 ">
-
+                            <div class="card mb-3 bg-dark navbar-light text-light" style="height: 80vh;">
                                 <div class="card-body">
-                                    <div
-                                        class=" bg-secondary text-light mb-4 w-100  d-flex justify-content-center align-content-center">
-
-                                        <h4 class="d-flex justify-content-center align-content-center ">Informações
-                                            da Vaquejada</h4>
-                                    </div>
+                                    <h3 class="d-flex justify-content-center align-content-center m-2">Cadastro de Vaquejada</h3>
+                                    <hr class="w-100" />
                                     <div class="row d-flex justify-content-center">
-
 
                                         <div class="col-md-4 ">
                                             <div class="row ">
@@ -72,7 +66,7 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-12 ">
-                                                    <img src="{{ asset('imgs/vaq_01.jpg') }}" id="folder_image"
+                                                    <img src="https://th.bing.com/th/id/OIP.xI8Q-r8Tmm_pRNioY6PLYQHaHa?rs=1&pid=ImgDetMain" id="folder_image"
                                                         class="w-100">
                                                 </div>
                                             </div>
@@ -97,12 +91,6 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="row">
-                                                        <div class="row">
-                                                            <div class="col-12 fw-bold">
-                                                                Dados pessoais:
-                                                            </div>
-                                                        </div>
-
                                                         <div class="col-md-11">
                                                             <div class="row">
                                                                 <label for="name" class="col-12">
